@@ -6,8 +6,8 @@ const readline = require('readline-sync');
 const validator = require('validator').default;
 
 // TODO: Add more names
-const MALE_NAMES = require('./config/maleNames.json');
-const FEMALE_NAMES = require('./config/femaleNames.json');
+const MALE_NAMES = require('../config/maleNames.json');
+const FEMALE_NAMES = require('../config/femaleNames.json');
 
 function getRandomInt(min, max) {
     min = Math.ceil(min);
