@@ -1,0 +1,26 @@
+{
+  "name": "message-deployer",
+  "version": "1.0.0",
+  "description": "Send messages to VK friends",
+  "main": "bin/index.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "node index.js"
+  },
+  "bin": {
+    "vkmd": "bin/index.js"
+  },
+  "keywords": [
+    "vk"
+  ],
+  "author": "MagicFun1241",
+  "license": "MIT",
+  "dependencies": {
+    "easyvk": "^2.5.11",
+    "readline-sync": "^1.4.10",
+    "validator": "^12.2.0"
+  },
+  "devDependencies": {
+    "mocha": "^7.1.0"
+  }
+}
