@@ -18,8 +18,10 @@ function getRandomInt(min, max) {
 async function main(vk) {
     console.log();
     
-    const message = readline.question('Enter message text: ');
+    const message = readline.question('Enter message text: ', { encoding: 'utf8' });
     const sex = readline.keyInSelect([ 'All', 'Girls', 'Boys' ]);
+
+    if (sex === -1) process.exit(0);
 
     var exclusions = [];
 
@@ -50,7 +52,8 @@ async function main(vk) {
         let timeout = 2000;
         let requests = 0;
 
-        console.log(`> ${vkr.count} users fetched.`);
+        console.log(`> ${vkr.count} users fetched`);
+        console.log(`> and it will be delivered to ${vkr.count - exclusions.length} users.`);
         console.log();
 
         for (let i = 0; i < vkr.items.length; i++) {
